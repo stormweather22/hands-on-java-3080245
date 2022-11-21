@@ -1,7 +1,5 @@
 package bank;
 
-import javax.swing.text.StyledEditorKit.BoldAction;
-
 public class Customer {
   private int id;
   private String name, username, password;
