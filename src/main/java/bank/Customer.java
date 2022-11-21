@@ -1,9 +1,12 @@
 package bank;
 
+import javax.swing.text.StyledEditorKit.BoldAction;
+
 public class Customer {
   private int id;
   private String name, username, password;
   private int accountid;
+  private boolean authenticated;
 
   public Customer(int id, String name, String username, String password, int accountid) {
     setId(id);
@@ -11,6 +14,7 @@ public class Customer {
     setUsername(username);
     setPassword(password);
     setAccountid(accountid);
+    setAuthenticated(false);
   }
 
   public int getId() {
@@ -51,6 +55,14 @@ public class Customer {
 
   public void setAccountid(int accountid) {
     this.accountid = accountid;
+  }
+
+  public boolean isAuthenticated() {
+    return this.authenticated;
+  }
+
+  public void setAuthenticated(boolean authenticated) {
+    this.authenticated = authenticated;
   }
 
 }
